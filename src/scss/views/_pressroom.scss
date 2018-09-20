@@ -1,0 +1,85 @@
+
+//
+//	Views / Contact
+//
+
+
+.view-pressroom {
+
+	section.header, section.footer {
+		min-height: 0; text-align: inherit;
+	}
+	
+	section.intro {
+
+		.bg {
+			background-image: url("../img/bg-press-intro.jpg");
+		}
+	}
+	
+	section.recent-articles {
+		text-align: left;
+		a {
+			color: $COLOR_BRAND_BASE;
+		}
+	}
+
+}
+
+
+
+/*
+ * 	Media Queries
+ *	--------------------------------------------------
+ *
+ *	- Breakpoints
+ *
+ *	large-desktop	1920 +
+ *	med-desktop 	1440 +
+ *	DEFAULT 		1025...1439 (1128)
+ *	tablet-wide		- 1024
+ *	tablet			- 768 (fluid)
+ *	smartphone-wide	- 640 (fluid)
+ *	smartphone		- 480 (fluid)
+ *	mobile			- 320 (fluid)
+ *
+ */
+
+
+
+/*
+ *	Breakpoint:	tablet-wide
+ *	--------------------------------------------------
+ */
+
+@include breakpoint(tablet-wide) {
+
+
+}
+
+
+
+/*
+ *	Breakpoint:	smartphone-wide
+ *	--------------------------------------------------
+ */
+ 
+ @include breakpoint(smartphone-wide) {
+	 .view-pressroom {
+		
+		section.intro {
+
+		}
+		
+		section.recent-articles {
+			text-align: center;
+			
+			.-align-right {
+				text-align: center;
+			}
+		}
+		
+	}
+		 
+ }
+ 

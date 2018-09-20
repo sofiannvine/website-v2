@@ -1,0 +1,77 @@
+
+//
+//	Views / Privacy
+//
+
+
+.view-privacy {
+	
+	section.intro {
+
+		.bg {
+			background-image: url("../img/bg-privacy-intro.jpg");
+		}
+	}
+
+	section.content {
+		text-align: left;
+		a {
+			color: $COLOR_BRAND_BASE;
+		}
+	}
+
+}
+
+
+
+
+/*
+ * 	Media Queries
+ *	--------------------------------------------------
+ *
+ *	- Breakpoints
+ *
+ *	large-desktop	1920 +
+ *	med-desktop 	1440 +
+ *	DEFAULT 		1025...1439 (1128)
+ *	tablet-wide		- 1024
+ *	tablet			- 768 (fluid)
+ *	smartphone-wide	- 640 (fluid)
+ *	smartphone		- 480 (fluid)
+ *	mobile			- 320 (fluid)
+ *
+ */
+
+
+
+/*
+ *	Breakpoint:	tablet-wide
+ *	--------------------------------------------------
+ */
+
+@include breakpoint(tablet-wide) {
+
+
+}
+
+
+
+/*
+ *	Breakpoint:	smartphone-wide
+ *	--------------------------------------------------
+ */
+ 
+ @include breakpoint(smartphone-wide) {
+	 .view-privacy {
+		
+		section.intro {
+
+		}
+		
+		section.content {
+			text-align: center;
+		}
+		
+	}
+		 
+ }

@@ -1,0 +1,62 @@
+{{#extend "master" view="404"}}
+	{{#content "head"}}
+
+		<title>Seatfrog - 404</title>
+		<meta name="keywords" content="airline auctions, bid on flight, seat, upgrades, passenger experience, ancillary revenue, merchandising">
+		<meta name="description" content="Whoops - something went wrong.">
+        <!--Open Graph-->
+        <meta property="og:url" content="http://www.seatfrog.com" />
+		<meta property="og:title" content="Seatfrog - Sign up for last minute airline upgrades" />
+        <meta property="og:description" content="Next time you travel get access to last minute upgrades with Seatfrog." />
+		<meta property="og:site_name" content="Seatfrog" />
+        <meta property="fb:app_id" content="604035766438664" /> 
+		<meta property="og:type" content="website" />
+        <meta property="og:image" content="http://www.seatfrog.com/assets/img/share-Seatfrog.jpg" />
+        <!--Twitter Card-->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@Seatfrog" />
+        <meta name="twitter:title" content="Seatfrog - Sign up for last minute airline upgrades" />
+        <meta name="twitter:description" content="Next time you travel get access to last minute upgrades with Seatfrog." />
+        <meta name="twitter:url" content="http://www.seatfrog.com" />
+        <meta name="twitter:image" content="http://www.seatfrog.com/assets/img/share-Seatfrog.jpg" />
+        
+	{{/content}}
+    
+    {{#content "main"}}
+
+        <div class="outline-main" data-hook="main">
+            <div class="page" data-hook="page">
+
+                <section class="intro -section-auto" data-blade="intro">
+                    <div class="container" data-parallax="-0.75">
+                        <div class="row -margin-none">
+                            <div class="col -twothirds -center">
+                                <h2 class="section-headline">Page not found</h2>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="bg" data-parallax="-0.85"></div>
+                </section>
+
+                <section class="-theme-light content" data-blade="content" data-blade-theme="light">
+
+                    <div class="container">
+                        
+                        <div class="row">
+                            <div class="col -wide -center">
+                                <h2>Error - Page Not Found</h2>
+								<p>Sorry, but the page you are looking for cannot be found. Try checking the URL for errors, then refreshing the page.<br />Alternatively, go back to our <a href="http://www.seatfrog.com">homepage</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                {{> footer }}
+
+            </div>
+        </div>
+
+    {{/content}}
+{{/extend}}

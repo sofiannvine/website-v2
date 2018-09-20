@@ -1,0 +1,252 @@
+
+//
+//  Global / Defaults
+//
+
+
+
+/*
+ *	Defaults: Core
+ *	--------------------------------------------------
+ */
+
+html {
+	width: 100%; height: 100%;
+}
+	body {
+		width: 100%; height: 100%;
+		overflow-x: hidden;
+		font-family: $FONT_PRIMARY;
+		line-height: $BASE_LINE_HEIGHT; color: $TEXT_COLOR; text-align: $TEXT_ALIGN;
+		-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+		background-color: $BACKGROUND_COLOR;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+
+/*
+ *	Defaults: Grid
+ *	--------------------------------------------------
+ */
+
+.-hide-desktop {
+	display: none;
+}
+
+
+/*
+ *	Defaults: Anchors
+ *	--------------------------------------------------
+ */
+
+a {
+	color: $LINK_COLOR;
+	font-weight: 500;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&.ui-btn {
+		font-family: $BUTTON_FONT;
+	}
+}
+
+
+/*
+ *	Defaults: Colors
+ *	--------------------------------------------------
+ */
+
+.-color-white { color: $COLOR_WHITE; }
+.-color-grey { color: $COLOR_GREY_DARK !important; }
+.-color-base { color: $COLOR_BRAND_BASE; }
+
+
+
+/*
+ *	Defaults: Nav
+ *	--------------------------------------------------
+ */
+
+nav {
+
+	ul {
+		margin: 0; padding: 0;
+		list-style-type: none;
+
+		li {
+			margin: 0; padding: 0;
+		}
+	}
+
+	&.nav--horizontal {
+
+		li {
+			margin-right: lines(1.5);
+			display: inline-block;
+		}
+	}
+}
+
+
+
+/*
+ *	Defaults: Typography
+ *	--------------------------------------------------
+ */
+
+
+h1, h2, h3, h4, h5, h6 {
+	color: $HEADINGS_COLOR;
+	text-transform: uppercase;
+
+	&.-font-alt {
+		font-family: $FONT_PRIMARY;
+		text-transform: none; letter-spacing: 0;
+	}
+	&.-color-alt,
+	.-color-alt {
+		color: $COLOR_BRAND_MAIN;
+	}
+}
+
+h1 {
+	margin-left: 5px; //text-indent: 20px;
+	color: $HEADINGS_COLOR;
+	letter-spacing: 5px;
+}
+
+h2, h3 {
+	letter-spacing: 3px;
+}
+
+h4 {
+	letter-spacing: 2px;
+}
+
+p {
+	&.-lead {
+		@extend .delta;
+
+		&.-color-alt {
+			color: $COLOR_BRAND_BASE;
+		}
+	}
+
+	&.-lead-mid {
+		@extend .delta-beta;
+
+		&.-color-alt {
+			color: $COLOR_BRAND_BASE;
+		}
+	}
+}
+
+blockquote {
+	margin: lines(1) 0;
+	font-weight: 300;
+
+	p {
+		margin: 0;
+	}
+
+	footer {
+		color: $COLOR_BRAND_BASE; font-weight: bold; font-style: italic;
+	}
+}
+
+.-color-alt {
+	color: $COLOR_GREY_DARK;
+}
+
+
+/*
+ *	Defaults: Images
+ *	--------------------------------------------------
+ */
+
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+
+/*
+ *	Defaults: Fonts
+ *	--------------------------------------------------
+ */
+ 
+ /* This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: https://www.linotype.com */
+
+@font-face{
+	font-family:"DINWebPro-CondBold W04 Regular";
+	font-style:   normal;
+	font-weight:  bold;
+	src: url("#{$DIR_FONTS}cc425adc-b33d-4948-9e4e-2af69d89d8b7.eot?#iefix"); 
+	src: url("#{$DIR_FONTS}cc425adc-b33d-4948-9e4e-2af69d89d8b7.eot?#iefix") format("eot"), 
+		 url("#{$DIR_FONTS}55edf1d0-fec1-4c44-8acf-895aad736f49.woff2") format("woff2"), 
+		 url("#{$DIR_FONTS}8fcdd7c7-a3d1-4c73-868e-0f72bc5eac41.woff") format("woff"),
+		 url("#{$DIR_FONTS}bc7e2b40-25e0-48a6-9732-0ee0d068ff8e.ttf") format("truetype");
+}
+
+
+/*
+ * 	Media Queries
+ *	--------------------------------------------------
+ *
+ *	- Breakpoints
+ *
+ *	large-desktop	1920 +
+ *	med-desktop 	1440 +
+ *	DEFAULT 		1025...1439 (1128)
+ *	tablet-wide		- 1024
+ *	tablet			- 768 (fluid)
+ *	smartphone-wide	- 640 (fluid)
+ *	smartphone		- 480 (fluid)
+ *	mobile			- 320 (fluid)
+ */
+
+
+/*
+ *	Breakpoint:	tablet-wide
+ *	--------------------------------------------------
+ */
+
+@include breakpoint(tablet-wide) {
+
+}
+
+
+/*
+ *	Breakpoint:	smartphone-wide
+ *	--------------------------------------------------
+ */
+
+@include breakpoint(smartphone-wide) {
+
+	.-hide-desktop {
+		display: inherit;
+	}
+	.-hide-mobile {
+		display: none;
+	}
+
+
+}
+
+
+/*
+ *	Breakpoint:	smartphone
+ *	--------------------------------------------------
+ */
+
+@include breakpoint(smartphone-wide) {
+
+	.alpha {
+		letter-spacing: 3px;
+	}
+
+}

@@ -1,0 +1,119 @@
+
+//
+//	Modules / Footer
+//
+
+
+
+.outline-footer {
+	
+}
+	section.footer {
+		padding-bottom: lines(1);
+
+		.footer-nav {
+			li {
+				&.-is-active {
+
+					a {
+						position: relative;
+						color: $COLOR_BRAND_MAIN;
+						opacity: 1;
+
+						&:after {
+							content: '';
+							width: 100%;
+							position: absolute; bottom: em(-10); left: 0;
+							display: block;
+							border-bottom: 2px solid currentColor;
+						}
+					}
+				}
+			}
+		}
+
+		.footer-sub {
+			padding-top: lines(2); margin-bottom: 0;
+			text-align: left;
+			color: fade-out($COLOR_GREY,0.75);
+
+			p {
+				a {
+					color: fade-out($COLOR_GREY,0.75);
+				}
+			}
+
+			.ui-social-links {
+				margin-top: lines(1);
+				float: right;
+			}
+		}
+
+		&.-simple {
+			padding: 0;
+			text-align: center;
+			color: $COLOR_GREY_SLATE;
+
+			p {
+				opacity: 0.75;
+			}
+
+			.logo {
+				width: lines(1); height: lines(1);
+				margin-right: lines(1);
+				display: inline-block;
+				vertical-align: top;
+
+				svg {
+					width: 100%; height: 100%; 
+					display: block;
+					fill: $COLOR_GREY_SLATE;
+				}
+			}
+		}
+	}
+
+
+
+/*
+ * 	Media Queries
+ *	--------------------------------------------------
+ *
+ *	- Breakpoints
+ *
+ *	large-desktop	1920 +
+ *	med-desktop 	1440 +
+ *	DEFAULT 		1025...1439 (1128)
+ *	tablet-wide		- 1024
+ *	tablet			- 768 (fluid)
+ *	smartphone-wide	- 640 (fluid)
+ *	smartphone		- 480 (fluid)
+ *	mobile			- 320 (fluid)
+ *
+ */
+
+
+
+/*
+ *	Breakpoint:	smartphone-wide
+ *	--------------------------------------------------
+ */
+
+@include breakpoint(smartphone-wide) {
+
+	section.footer {
+		
+		&.-simple {
+			.logo {
+				margin: 0 auto lines(0.5);
+				display: block;
+			}
+		}
+
+		.footer-sub {
+			padding-top: 0;
+		}
+		
+	}
+
+}
